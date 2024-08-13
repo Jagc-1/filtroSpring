@@ -19,7 +19,7 @@ public class Labatory {
     private String namelab;
 
     @ManyToOne
-    @JoinColumn(name = "codecity")
+    @JoinColumn(name = "codecityreg")
     private City codecityreg;
 
     public Labatory() {

@@ -1,3 +1,4 @@
+
 package com.campus.filtro.persistence.entities;
 
 import jakarta.persistence.Entity;
@@ -12,7 +13,7 @@ public class Country {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private String codecountry;
+    private Integer codecountry;
     
     private String namecountry;
 
@@ -23,11 +24,11 @@ public class Country {
         this.namecountry = namecountry;
     }
 
-    public String getCodecountry() {
+    public Integer getCodecountry() {
         return codecountry;
     }
 
-    public void setCodecountry(String codecountry) {
+    public void setCodecountry(Integer codecountry) {
         this.codecountry = codecountry;
     }
 
@@ -39,5 +40,4 @@ public class Country {
         this.namecountry = namecountry;
     }
 
-    
 }

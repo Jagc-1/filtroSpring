@@ -14,12 +14,12 @@ public class Region {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private String codereg;
+    private Integer coderegion;
 
-    private String namereg;
+    private String nameregion;
 
     @ManyToOne
-    @JoinColumn(name="codecountry")
+    @JoinColumn(name="id_codecountry ")
     private Country codecountry;
 
 
@@ -27,29 +27,23 @@ public class Region {
     }
 
 
-    public Region(String namereg, Country codecountry) {
-        this.namereg = namereg;
-        this.codecountry = codecountry;
+    public Integer getId_coderegion() {
+        return coderegion;
     }
 
 
-    public String getCodereg() {
-        return codereg;
+    public void setId_coderegion(Integer coderegion) {
+        this.coderegion = coderegion;
     }
 
 
-    public void setCodereg(String codereg) {
-        this.codereg = codereg;
+    public String getNameregion() {
+        return nameregion;
     }
 
 
-    public String getNamereg() {
-        return namereg;
-    }
-
-
-    public void setNamereg(String namereg) {
-        this.namereg = namereg;
+    public void setNameregion(String nameregion) {
+        this.nameregion = nameregion;
     }
 
 
@@ -62,6 +56,4 @@ public class Region {
         this.codecountry = codecountry;
     }
 
-   
-    
 }

@@ -14,30 +14,30 @@ public class City {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private String codecity;
+    private Integer codecity;
     private String namecity;
 
     @ManyToOne
-    @JoinColumn(name="codereg")
-    private Region codereg;
+    @JoinColumn(name="coderegion")
+    private Region coderegion;
 
     
     public City() {
     }
 
 
-    public City(String namecity, Region codereg) {
+    public City(String namecity, Region coderegion) {
         this.namecity = namecity;
-        this.codereg = codereg;
+        this.coderegion = coderegion;
     }
 
 
-    public String getCodecity() {
+    public Integer getCodecity() {
         return codecity;
     }
 
 
-    public void setCodecity(String codecity) {
+    public void setCodecity(Integer codecity) {
         this.codecity = codecity;
     }
 
@@ -52,15 +52,14 @@ public class City {
     }
 
 
-    public Region getCodereg() {
-        return codereg;
+    public Region getCoderegion() {
+        return coderegion;
     }
 
 
-    public void setCodereg(Region codereg) {
-        this.codereg = codereg;
+    public void setCoderegion(Region coderegion) {
+        this.coderegion = coderegion;
     }
-
 
 
     

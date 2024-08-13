@@ -22,7 +22,7 @@ public class Farmacy {
     private  Integer latfarmacy;
 
     @ManyToOne
-    @JoinColumn(name="codecity")
+    @JoinColumn(name="codecityfarm")
     private  City  codecityfarm; 
     private  String  logofarmacy;
 

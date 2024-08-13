@@ -16,7 +16,7 @@ public class Customer {
 
      @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private  String  idcustomer; 
+    private  Integer  idcustomer; 
     private  String namecustomer;   
     private  String lastnamecustomer;   
 
@@ -43,11 +43,11 @@ public class Customer {
         this.latitud = latitud;
     }
 
-    public String getIdcustomer() {
+    public Integer getIdcustomer() {
         return idcustomer;
     }
 
-    public void setIdcustomer(String idcustomer) {
+    public void setIdcustomer(Integer idcustomer) {
         this.idcustomer = idcustomer;
     }
 

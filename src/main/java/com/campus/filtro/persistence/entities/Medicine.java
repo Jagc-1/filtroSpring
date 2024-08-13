@@ -29,20 +29,35 @@ public class Medicine {
     private  ModeAdministration codemodeadmin;
 
     @ManyToOne
-    @JoinColumn(name="idmedicinefatrm")
+    @JoinColumn(name="id_codeap")
     private  ActivePrinciple codeap;
 
     @ManyToOne
-    @JoinColumn(name="idum")
+    @JoinColumn(name="id_codeum")
     private  Unitmeasurement codeum;
 
     private  String namerol;
 
     @ManyToOne
     @JoinColumn(name="id_lab")
-    private  Labatory codelab;
+    private  Labatory lab;
 
     public Medicine() {
+    }
+
+    public Medicine(String proceedings, String namemedicine, String healtregister, String description,
+            String descriptionshort, ModeAdministration codemodeadmin, ActivePrinciple codeap, Unitmeasurement codeum,
+            String namerol, Labatory lab) {
+        this.proceedings = proceedings;
+        this.namemedicine = namemedicine;
+        this.healtregister = healtregister;
+        this.description = description;
+        this.descriptionshort = descriptionshort;
+        this.codemodeadmin = codemodeadmin;
+        this.codeap = codeap;
+        this.codeum = codeum;
+        this.namerol = namerol;
+        this.lab = lab;
     }
 
     public Integer getId_medicine() {
@@ -125,12 +140,12 @@ public class Medicine {
         this.namerol = namerol;
     }
 
-    public Labatory getCodelab() {
-        return codelab;
+    public Labatory getLab() {
+        return lab;
     }
 
-    public void setCodelab(Labatory codelab) {
-        this.codelab = codelab;
+    public void setLab(Labatory lab) {
+        this.lab = lab;
     }
 
     
